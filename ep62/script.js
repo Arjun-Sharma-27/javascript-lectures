@@ -14,10 +14,16 @@ let inputValue
 //     paragraph.innerText=e.target.value
 //     console.log(' input value changed');
 // })
-inputUsername.addEventListener('change', (e)=>{
-    console.log(e.target.value);
+// inputUsername.addEventListener('change', (e)=>{
+//     console.log(e.target.value);
+//     inputValue=e.target.value
+
+//     paragraph.innerText=e.target.value
+//     console.log(' input value changed');
+// })
+inputUsername.addEventListener('focus', (e)=>{
+    console.log(e);
     inputValue=e.target.value
 
     paragraph.innerText=e.target.value
-    console.log(' input value changed');
 })
