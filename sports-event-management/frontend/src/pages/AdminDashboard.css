@@ -1,0 +1,169 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.admin-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.admin-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.header-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-game-card {
+  background: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.admin-game-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.game-info p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.game-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.game-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.registrations-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.registrations-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+}
+
+.registrations-table thead {
+  background: var(--bg-color);
+}
+
+.registrations-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.registrations-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.registrations-table tbody tr:hover {
+  background: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    padding: 24px 16px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-filters {
+    width: 100%;
+  }
+
+  .header-filters input,
+  .header-filters select {
+    width: 100% !important;
+  }
+
+  .admin-game-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-actions {
+    width: 100%;
+  }
+
+  .game-actions .btn {
+    flex: 1;
+  }
+
+  .registrations-table {
+    font-size: 14px;
+  }
+
+  .registrations-table th,
+  .registrations-table td {
+    padding: 8px;
+  }
+}
