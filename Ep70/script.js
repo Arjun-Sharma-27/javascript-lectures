@@ -9,11 +9,14 @@ const button = document.querySelector('button')
 //   })
 // })
 button.addEventListener('click', () => {
-  const xhr= new XMLHttpRequest
-  console.log(xhr);
-  xhr.addEventListener('load',()=>{
-  console.log(xhr);
-  })
-  xhr.open('GET',"https://dog.ceo/api/breeds/image/random")
-  xhr.send()
+    const xhr = new XMLHttpRequest
+    xhr.responseType = 'json'
+    xhr.addEventListener('load', () => {
+        image.src = xhr.response.message
+        console.log(xhr.response);
+        console.log(xhr);
+
+    })
+    xhr.open('GET', "https://dog.ceo/api/breeds/image/random")
+    xhr.send()
 })
