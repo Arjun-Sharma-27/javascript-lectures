@@ -4,14 +4,16 @@ const button = document.querySelector('button')
 
 button.addEventListener('click', () => {
   const xhr= new XMLHttpRequest
+  console.log(xhr);
+
   // xhr.responseType='json'
   xhr.addEventListener('load',()=>{
-    image.src=JSON.parse(xhr.response).message
-  console.log(xhr.response);
+    // image.src=JSON.parse(xhr.response).message
+  console.log(xhr);
   // console.log(xhr);
 
   })
-  xhr.open('GET',"https://dog.ceo/api/breeds/image/random",false)
+  xhr.open('GET','https://6wrlmkp9u2.execute-api.us-east-1.amazonaws.com/?sleep=4000',)
   xhr.send()
 })
 // setTimeout(()=>{
