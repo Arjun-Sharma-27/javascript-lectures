@@ -4,16 +4,15 @@ const button = document.querySelector('button')
 
 button.addEventListener('click', () => {
   const xhr= new XMLHttpRequest
-  xhr.responseType='json'
+  // xhr.responseType='json'
   xhr.addEventListener('load',()=>{
-    image.src=xhr.response.message
+    image.src=JSON.parse(xhr.response).message
   console.log(xhr.response);
-  console.log(xhr);
+  // console.log(xhr);
 
-  
-  xhr.open('GET',"https://dog.ceo/api/breeds/image/random")
+  })
+  xhr.open('GET',"https://dog.ceo/api/breeds/image/random",false)
   xhr.send()
-})
 })
 // setTimeout(()=>{
 // console.log('hi');
