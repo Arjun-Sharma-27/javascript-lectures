@@ -5,7 +5,7 @@ const button = document.querySelector('button')
 //   fetch('https://dog.ceo/api/breeds/image/random')
 //   .then(response => response.json())
 //   .then(json => {
-//     image.src = json.message
+//     image.src = json.message 
 //   })
 // })
 button.addEventListener('click', () => {
@@ -23,6 +23,14 @@ xhr.onload=()=>{
   xhr.open('GET',"https://dog.ceo/api/breeds/image/random")
   xhr.send()
 })
-setTimeout(()=>{
-console.log(hi);
-},4000)
+// setTimeout(()=>{
+// console.log('hi');
+// },4000)
+const blockinbutton= document.querySelector(".blockin-btn")
+blockinbutton.addEventListener('click',()=>{
+const startTime= Date.now()
+let currentTime= startTime
+while(startTime+4000> currentTime){
+  currentTime=Date.now()
+}
+})
